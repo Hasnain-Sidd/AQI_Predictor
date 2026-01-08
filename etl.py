@@ -41,6 +41,6 @@ def load_data(df_dict):
 
 extract=extract_data()
 transform=transofrm_data(extract)
-load_data()
+load_data(transform)
 
 
