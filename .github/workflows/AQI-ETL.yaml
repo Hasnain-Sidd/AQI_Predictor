@@ -26,7 +26,7 @@ jobs:
 
       - name: Run ETL
         env:
-          WAQI_API_KEY: ${{secrets.WAQI_API_KEY}}
+          WAQI_API_TOKEN: ${{secrets.WAQI_API_TOKEN}}
           HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
         run: |
           python etl.py

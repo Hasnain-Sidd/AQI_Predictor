@@ -6,8 +6,9 @@ import os
 
 def extract_data():
 
-    token=os.getenv("WAQI_API_KEY")
-    response=requests.get(f"https://api.waqi.info/feed/A544966/?token={token}")
+    token=os.getenv("WAQI_API_TOKEN")
+    url=f"https://api.waqi.info/feed/A544966/?token={token}"
+    response=requests.get(url)
     data=response.json()
     return data
 
