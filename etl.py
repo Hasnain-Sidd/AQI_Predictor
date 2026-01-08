@@ -1,10 +1,13 @@
 import pandas as pd 
 import hopsworks
 import requests
+import os
 
 
-def extract_data(url):
-    response=requests.get(url)
+def extract_data():
+
+    token=os.getenv("WAQI_API_KEY")
+    response=requests.get(f"https://api.waqi.info/feed/A544966/?token={token}")
     data=response.json()
     return data
 
@@ -35,7 +38,7 @@ def load_data(df_dict):
     
     fg.insert(df)
 
-extract=extract_data("https://api.waqi.info/feed/A544966/?token=2f610c2eea3409a00f590d97ceda3a5e7c6ae09f")
+extract=extract_data()
 transform=transofrm_data(extract_data)
 load_data()
 
