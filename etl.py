@@ -32,11 +32,10 @@ def load_data(df_dict):
     project =hopsworks.login()
     fs=project.get_feature_store()
     fg = fs.get_or_create_feature_group(
-     name="karachi_air_quality_",
+     name="karachi_air_quality",
      version=1,
      primary_key=["aqi"],
      description="Air Quality Index data")
-    
     fg.insert(df)
 
 extract=extract_data()
