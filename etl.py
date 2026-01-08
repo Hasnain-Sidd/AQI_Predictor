@@ -40,7 +40,7 @@ def load_data(df_dict):
     fg.insert(df)
 
 extract=extract_data()
-transform=transofrm_data(extract_data)
+transform=transofrm_data(extract)
 load_data()
 
 
