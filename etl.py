@@ -37,7 +37,7 @@ def load_data(df_dict):
      primary_key=["aqi"],
      online_enabled=False,
      description="Air Quality Index data")
-    fg.insert(df,write_options={'kafka':False})
+    fg.insert(df)
 
 extract=extract_data()
 transform=transofrm_data(extract)
