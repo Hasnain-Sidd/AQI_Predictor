@@ -2,4 +2,4 @@ pandas==2.1.4
 requests==2.32.3
 pyarrow==14.0.2
 hopsworks==4.2.*
-hsfs==3.7.0
+hsfs==3.7.9
