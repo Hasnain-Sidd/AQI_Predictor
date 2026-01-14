@@ -34,8 +34,7 @@ def load_data(df_dict):
     fg = fs.get_or_create_feature_group(
      name="karachi_aqi_data",
      version=1,
-     primary_key=["time"],
-     event_time='time',
+     primary_key=["aqi"],
      online_enabled=False,
      description="Air Quality Index data")
     fg.insert(df, write_options={"start_offline_materialization": False})
