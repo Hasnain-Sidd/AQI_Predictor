@@ -38,7 +38,7 @@ def load_data(df_dict):
      event_time='time',
      online_enabled=False,
      description="Air Quality Index data")
-    fg.insert(df)
+    fg.insert(df, write_options={"start_offline_materialization": False})
 
 extract=extract_data()
 transform=transofrm_data(extract)
